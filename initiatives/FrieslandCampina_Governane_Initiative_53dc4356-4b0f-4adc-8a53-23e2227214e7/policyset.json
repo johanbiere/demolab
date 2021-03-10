@@ -1,0 +1,151 @@
+{
+ "properties": {
+  "displayName": "FrieslandCampina Governane Initiative",
+  "policyType": "Custom",
+  "metadata": {
+   "category": "Governance",
+   "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "createdOn": "2020-07-13T07:13:55.377917Z",
+   "updatedBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "updatedOn": "2020-07-13T10:25:06.6727073Z",
+   "parameterScopes": {
+    "listOfAllowedLocations": "/providers/Microsoft.Management/managementGroups/frieslandcampina",
+    "listOfLocations": "/providers/Microsoft.Management/managementGroups/frieslandcampina"
+   },
+   "ASC": "true"
+  },
+  "parameters": {},
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "7655511923491484518",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/1a87f4c5-2e00-4143-8f16-0c5010967bf9",
+    "parameters": {
+     "name": {
+      "value": "name"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "6329839169521681207",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/1a87f4c5-2e00-4143-8f16-0c5010967c00",
+    "parameters": {
+     "appenv": {
+      "value": "appenv"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "15473891865192822570",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/1a87f4c5-2e00-4143-8f16-0c5010967c07",
+    "parameters": {
+     "bgrp": {
+      "value": "bgrp"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "2614153038044877217",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/1a87f4c5-2e00-4143-8f16-0c5010967c0e",
+    "parameters": {
+     "cmdbid": {
+      "value": "cmdbid"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "12829106429764688340",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/1a87f4c5-2e00-4143-8f16-0c5010967c15",
+    "parameters": {
+     "birthdate": {
+      "value": "birthdate"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "1385313628380553152",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f70",
+    "parameters": {
+     "appenv": {
+      "value": "appenv"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "15817065445024699539",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f69",
+    "parameters": {
+     "name": {
+      "value": "name"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "7931786627450928289",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/b17cace4-b2b6-45f5-a3d8-ad0ad585a855",
+    "parameters": {
+     "birthdate": {
+      "value": "birthdate"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "141181152142414319",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/b17cace4-b2b6-45f5-a3d8-ad0ad585a84e",
+    "parameters": {
+     "cmdbid": {
+      "value": "cmdbid"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "12541360776253180506",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/b17cace4-b2b6-45f5-a3d8-ad0ad585a847",
+    "parameters": {
+     "bgrp": {
+      "value": "bgrp"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "8901174626542579624",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f62",
+    "parameters": {}
+   },
+   {
+    "policyDefinitionReferenceId": "4670298488631375153",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/8313bcac-a1ba-443f-9afb-25636bbd7143",
+    "parameters": {
+     "listOfAllowedLocations": {
+      "value": [
+       "westeurope",
+       "northeurope"
+      ]
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "11319532729410315042",
+    "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f5b",
+    "parameters": {
+     "appenv": {
+      "value": "appenv"
+     }
+    }
+   },
+   {
+    "policyDefinitionReferenceId": "4775171317103030609",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b6e2945c-0b7b-40f5-9233-7a5323b5cdc6",
+    "parameters": {
+     "listOfLocations": {
+      "value": [
+       "westeurope"
+      ]
+     }
+    }
+   }
+  ]
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policySetDefinitions/53dc4356-4b0f-4adc-8a53-23e2227214e7",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "53dc4356-4b0f-4adc-8a53-23e2227214e7"
+}

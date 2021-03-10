@@ -1,0 +1,25 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "FrieslandCampina Governane Initiative",
+  "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policySetDefinitions/53dc4356-4b0f-4adc-8a53-23e2227214e7",
+  "scope": "/providers/Microsoft.Management/managementGroups/frieslandcampina",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "Xander Kaspers",
+   "parameterScopes": {},
+   "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "createdOn": "2020-07-13T10:01:36.9205395Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyAssignments/38d1b549120344ddb070583f",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "38d1b549120344ddb070583f"
+}
