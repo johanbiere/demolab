@@ -1,0 +1,51 @@
+{
+ "properties": {
+  "displayName": "Audit Resource Group Lock for production workloads",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Audit resource group locks based on appenv tag ending with prd",
+  "metadata": {
+   "category": "Governance",
+   "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "createdOn": "2020-07-13T07:14:45.598783Z",
+   "updatedBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "updatedOn": "2020-07-13T07:20:30.6133623Z"
+  },
+  "parameters": {
+   "appenv": {
+    "type": "String",
+    "metadata": {
+     "displayName": "appenv",
+     "description": "The Tag name to audit against (i.e. Environment, CostCenter, etc.)"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+     },
+     {
+      "field": "[concat('tags[', parameters('appenv'), ']')]",
+      "like": "*-prd"
+     }
+    ]
+   },
+   "then": {
+    "effect": "auditIfNotExists",
+    "details": {
+     "type": "Microsoft.Authorization/locks",
+     "existenceCondition": {
+      "field": "Microsoft.Authorization/locks/level",
+      "equals": "CanNotDelete"
+     }
+    }
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f5b",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "e0c97dce-0427-4fe3-b064-4116efce6f5b"
+}

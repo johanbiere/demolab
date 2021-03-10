@@ -1,0 +1,77 @@
+{
+ "properties": {
+  "displayName": "FC Audit NSG rule changes that allow all inbound traffic",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "category": "Governance",
+   "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "createdOn": "2020-07-13T07:15:28.5931093Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Network/networkSecurityGroups/securityRules"
+     },
+     {
+      "allOf": [
+       {
+        "field": "Microsoft.Network/networkSecurityGroups/securityRules/access",
+        "equals": "Allow"
+       },
+       {
+        "field": "Microsoft.Network/networkSecurityGroups/securityRules/direction",
+        "equals": "Inbound"
+       },
+       {
+        "anyOf": [
+         {
+          "field": "Microsoft.Network/networkSecurityGroups/securityRules/destinationPortRange",
+          "equals": "*"
+         },
+         {
+          "not": {
+           "field": "Microsoft.Network/networkSecurityGroups/securityRules/destinationPortRanges[*]",
+           "notEquals": "*"
+          }
+         }
+        ]
+       },
+       {
+        "anyOf": [
+         {
+          "field": "Microsoft.Network/networkSecurityGroups/securityRules/sourceAddressPrefix",
+          "in": [
+           "*",
+           "Internet"
+          ]
+         },
+         {
+          "not": {
+           "field": "Microsoft.Network/networkSecurityGroups/securityRules/sourceAddressPrefixes[*]",
+           "notIn": [
+            "*",
+            "Internet"
+           ]
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f62",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "e0c97dce-0427-4fe3-b064-4116efce6f62"
+}

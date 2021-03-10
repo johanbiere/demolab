@@ -1,0 +1,44 @@
+{
+ "properties": {
+  "displayName": "FC cmdbid Tag on resource groups",
+  "policyType": "Custom",
+  "mode": "All",
+  "description": "Audit existence of a tag to resource groups.",
+  "metadata": {
+   "category": "Tags",
+   "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "createdOn": "2020-07-13T07:11:34.609659Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {
+   "cmdbid": {
+    "type": "String",
+    "metadata": {
+     "displayName": "cmdbid",
+     "description": "Name of the tag"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Resources/subscriptions/resourceGroups"
+     },
+     {
+      "field": "[concat('tags[', parameters('cmdbid'), ']')]",
+      "exists": "false"
+     }
+    ]
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/1a87f4c5-2e00-4143-8f16-0c5010967c0e",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "1a87f4c5-2e00-4143-8f16-0c5010967c0e"
+}

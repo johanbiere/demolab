@@ -1,0 +1,56 @@
+name: manage-azure-policy-d24c9095
+on:
+  workflow_dispatch:
+    inputs:
+      remarks:
+        description: 'Reason for triggering the workflow run'
+        required: false
+        default: 'Updating Azure Policies'
+
+
+## Uncomment the following if you wish to automatically trigger workflow run with every commit
+#
+#  push:
+#    paths:
+#      - 'policies/FC_name_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967bf9/**'
+#      - 'policies/FC_appenv_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c00/**'
+#      - 'policies/FC_bgrp_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c07/**'
+#      - 'policies/FC_cmdbid_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c0e/**'
+#      - 'policies/FC_birthdate_tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c15/**'
+#      - 'policies/FC_Audit_Allowed_locations_8313bcac-a1ba-443f-9afb-25636bbd7143/**'
+#      - 'policies/FC_bgrp_Tag_on_resources_b17cace4-b2b6-45f5-a3d8-ad0ad585a847/**'
+#      - 'policies/FC_cmdbid_Tag_on_resources_b17cace4-b2b6-45f5-a3d8-ad0ad585a84e/**'
+#      - 'policies/FC_birthdate_Tag_on_resources_b17cace4-b2b6-45f5-a3d8-ad0ad585a855/**'
+#      - 'policies/Audit_Resource_Group_Lock_for_production_workloads_e0c97dce-0427-4fe3-b064-4116efce6f5b/**'
+#      - 'policies/FC_Audit_NSG_rule_changes_that_allow_all_inbound_traffic_e0c97dce-0427-4fe3-b064-4116efce6f62/**'
+#      - 'policies/FC_name_Tag_on_resources_e0c97dce-0427-4fe3-b064-4116efce6f69/**'
+#      - 'policies/FC_appenv_Tag_on_resources_e0c97dce-0427-4fe3-b064-4116efce6f70/**'
+#      - .github/workflows/manage-azure-policy-d24c9095.yml
+jobs:
+  apply-azure-policy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS_d24c9095}}
+        allow-no-subscriptions: true
+    - name: Create or Update Azure Policies
+      uses: azure/manage-azure-policy@v0
+      with:
+        paths: |
+          policies/FC_name_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967bf9/**
+          policies/FC_appenv_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c00/**
+          policies/FC_bgrp_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c07/**
+          policies/FC_cmdbid_Tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c0e/**
+          policies/FC_birthdate_tag_on_resource_groups_1a87f4c5-2e00-4143-8f16-0c5010967c15/**
+          policies/FC_Audit_Allowed_locations_8313bcac-a1ba-443f-9afb-25636bbd7143/**
+          policies/FC_bgrp_Tag_on_resources_b17cace4-b2b6-45f5-a3d8-ad0ad585a847/**
+          policies/FC_cmdbid_Tag_on_resources_b17cace4-b2b6-45f5-a3d8-ad0ad585a84e/**
+          policies/FC_birthdate_Tag_on_resources_b17cace4-b2b6-45f5-a3d8-ad0ad585a855/**
+          policies/Audit_Resource_Group_Lock_for_production_workloads_e0c97dce-0427-4fe3-b064-4116efce6f5b/**
+          policies/FC_Audit_NSG_rule_changes_that_allow_all_inbound_traffic_e0c97dce-0427-4fe3-b064-4116efce6f62/**
+          policies/FC_name_Tag_on_resources_e0c97dce-0427-4fe3-b064-4116efce6f69/**
+          policies/FC_appenv_Tag_on_resources_e0c97dce-0427-4fe3-b064-4116efce6f70/**

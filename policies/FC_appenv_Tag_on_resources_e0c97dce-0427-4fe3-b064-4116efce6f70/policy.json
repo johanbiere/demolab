@@ -1,0 +1,118 @@
+{
+ "properties": {
+  "displayName": "FC appenv Tag on resources",
+  "policyType": "Custom",
+  "mode": "Indexed",
+  "description": "Audit existence of a tag. Does not apply to resource groups.",
+  "metadata": {
+   "category": "Tags",
+   "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "createdOn": "2020-07-13T07:17:40.324433Z",
+   "updatedBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
+   "updatedOn": "2020-07-20T13:10:01.3981034Z"
+  },
+  "parameters": {
+   "appenv": {
+    "type": "String",
+    "metadata": {
+     "displayName": "appenv",
+     "description": "Name of the tag"
+    }
+   }
+  },
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "[concat('tags[', parameters('appenv'), ']')]",
+      "exists": "false"
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "Microsoft.Compute/virtualMachines/extensions"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.network/networkwatchers/flowlogs"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.network/networkwatchers"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.devtestlab/schedules"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.insights/actiongroups"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.insights/metricalerts"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.insights/metricalerts"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.insights/scheduledqueryrules"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.insights/autoscalesettings"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.alertsmanagement/smartdetectoralertrules"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "Microsoft.Web/certificates"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "Microsoft.OperationsManagement/solutions"
+      }
+     },
+     {
+      "not": {
+       "field": "type",
+       "equals": "microsoft.insights/activityLogAlerts"
+      }
+     }
+    ]
+   },
+   "then": {
+    "effect": "audit"
+   }
+  }
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/frieslandcampina/providers/Microsoft.Authorization/policyDefinitions/e0c97dce-0427-4fe3-b064-4116efce6f70",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "e0c97dce-0427-4fe3-b064-4116efce6f70"
+}
