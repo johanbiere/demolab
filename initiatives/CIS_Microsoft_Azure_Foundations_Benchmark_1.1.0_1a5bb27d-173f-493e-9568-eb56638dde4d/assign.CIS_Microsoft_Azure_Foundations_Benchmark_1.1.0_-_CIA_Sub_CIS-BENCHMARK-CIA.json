@@ -1,0 +1,25 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "CIS Microsoft Azure Foundations Benchmark 1.1.0 - CIA Sub",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1a5bb27d-173f-493e-9568-eb56638dde4d",
+  "scope": "/subscriptions/372ff4eb-841d-4efa-af11-f057c9460c0d",
+  "notScopes": [],
+  "parameters": {},
+  "description": "",
+  "metadata": {
+   "createdBy": "1ec7c320-ae9f-488d-82df-1b2bfa514a40",
+   "createdOn": "2021-03-11T11:38:50.2699319Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/372ff4eb-841d-4efa-af11-f057c9460c0d/providers/Microsoft.Authorization/policyAssignments/CIS-BENCHMARK-CIA",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "CIS-BENCHMARK-CIA",
+ "location": ""
+}

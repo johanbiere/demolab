@@ -1,0 +1,27 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "[Preview]: Audit CIS Microsoft Azure Foundations Benchmark 1.1.0 recommendations and deploy specific supporting VM Extensions",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1a5bb27d-173f-493e-9568-eb56638dde4d",
+  "scope": "/subscriptions/372ff4eb-841d-4efa-af11-f057c9460c0d",
+  "notScopes": [],
+  "parameters": {},
+  "metadata": {
+   "assignedBy": "sebastiaan.van.putten@inspark.nl ",
+   "parameterScopes": {
+    "listOfRegionsWhereNetworkWatcherShouldBeEnabled": "/subscriptions/372ff4eb-841d-4efa-af11-f057c9460c0d"
+   },
+   "createdBy": "698eda38-9e41-42b3-96e6-e948dbd674fe",
+   "createdOn": "2020-02-26T13:19:57.808832Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/372ff4eb-841d-4efa-af11-f057c9460c0d/providers/Microsoft.Authorization/policyAssignments/cf83a430edce4057b7f0b11b",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "cf83a430edce4057b7f0b11b"
+}
