@@ -1,0 +1,146 @@
+{
+ "properties": {
+  "displayName": "AGG Managed Cloud Policy Initiative",
+  "policyType": "Custom",
+  "description": "This initiave extends the Azure Security Center default policy with addtional recommended security policies for governance.",
+  "metadata": {
+   "version": "1.0.0",
+   "category": "Governance",
+   "createdBy": "ea441acd-4b02-41e6-9328-97385b6fab64",
+   "createdOn": "2021-07-08T05:57:32.7669161Z",
+   "updatedBy": "f699eed1-3de9-4c31-823e-19d14d2ed063",
+   "updatedOn": "2021-07-20T07:12:05.7645975Z",
+   "parameterScopes": {
+    "listOfAllowedLocations": "/providers/Microsoft.Management/managementGroups/e2b2f8a7-b04f-436d-aafb-49f3f5b9b970"
+   }
+  },
+  "parameters": {
+   "AGG Allowed Locations": {
+    "type": "array",
+    "metadata": {
+     "displayName": "AGG Allowed Locations",
+     "description": "AGG Allowed Locations",
+     "strongType": "location"
+    },
+    "allowedValues": [
+     "northeurope",
+     "westeurope",
+     "europe",
+     "global"
+    ],
+    "defaultValue": [
+     "northeurope",
+     "westeurope",
+     "europe",
+     "global"
+    ]
+   }
+  },
+  "policyDefinitions": [
+   {
+    "policyDefinitionReferenceId": "17855120121258090365",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/013e242c-8828-4970-87b3-ab247555486d",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "9322355339356118792",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/efbde977-ba53-4479-b8e9-10b957924fbf",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "16830972114020434622",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a70ca396-0a34-413a-88e1-b956c1e683be",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "6993175037974787778",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/475aae12-b88a-4572-8b36-9b712b2b3a17",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "8044870099827093134",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/06a78e20-9358-41c9-923c-fb736d382a4d",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "546003067245188849",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0ec47710-77ff-4a3d-9181-6aa50af424d0",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "1605595701233839772",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/82339799-d096-41ae-8538-b108becf0970",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "13300340347546826280",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/48af4db5-9b8b-401c-8e74-076be876a430",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "6063081874257618332",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f9be5368-9bf5-4b84-9e0a-7850da98bb46",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "17363037789892644951",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e66c121-a66a-4b1f-9b83-0fd99bf0fc2d",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "1165573125636797310",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b4330a05-a843-4bc8-bf9a-cacce50c67f4",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "15730883191203649036",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/83a214f7-d01a-484b-91a9-ed54470c9a6a",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "2719031940633985590",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0a914e76-4921-4c19-b460-a2d36003525a",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "10810057272097188779",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e345b6c3-24bd-4c93-9bbb-7e5e49a17b78",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "14733579525857020667",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/22730e10-96f6-4aac-ad84-9383d35b5917",
+    "parameters": {},
+    "groupNames": []
+   },
+   {
+    "policyDefinitionReferenceId": "Allowed locations_1",
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c",
+    "parameters": {
+     "listOfAllowedLocations": {
+      "value": "[parameters('AGG Allowed Locations')]"
+     }
+    },
+    "groupNames": []
+   }
+  ],
+  "policyDefinitionGroups": []
+ },
+ "id": "/providers/Microsoft.Management/managementGroups/e2b2f8a7-b04f-436d-aafb-49f3f5b9b970/providers/Microsoft.Authorization/policySetDefinitions/AgilitasGroupManagedCloudPolicyInitiatives",
+ "type": "Microsoft.Authorization/policySetDefinitions",
+ "name": "AgilitasGroupManagedCloudPolicyInitiatives"
+}
