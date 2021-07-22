@@ -9,7 +9,7 @@
    "createdBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
    "createdOn": "2020-07-13T07:19:22.3917592Z",
    "updatedBy": "d64eec72-7c5c-4ed4-add1-4933624d010c",
-   "updatedOn": "2020-07-20T13:11:32.6146851Z"
+   "updatedOn": "2021-05-05T15:51:30.4246834Z"
   },
   "parameters": {
    "cmdbid": {
@@ -28,76 +28,60 @@
       "exists": "false"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "Microsoft.Compute/virtualMachines/extensions"
-      }
+      "field": "type",
+      "notEquals": "Microsoft.Compute/virtualMachines/extensions"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.network/networkwatchers/flowlogs"
-      }
+      "field": "type",
+      "notEquals": "microsoft.network/networkwatchers/flowlogs"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.network/networkwatchers"
-      }
+      "field": "type",
+      "notEquals": "microsoft.network/networkwatchers"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.devtestlab/schedules"
-      }
+      "field": "type",
+      "notEquals": "microsoft.devtestlab/schedules"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.insights/actiongroups"
-      }
+      "field": "type",
+      "notEquals": "microsoft.insights/actiongroups"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.insights/metricalerts"
-      }
+      "field": "type",
+      "notEquals": "microsoft.insights/metricalerts"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.insights/scheduledqueryrules"
-      }
+      "field": "type",
+      "notEquals": "microsoft.insights/metricalerts"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.insights/autoscalesettings"
-      }
+      "field": "type",
+      "notEquals": "microsoft.insights/scheduledqueryrules"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.alertsmanagement/smartdetectoralertrules"
-      }
+      "field": "type",
+      "notEquals": "microsoft.insights/autoscalesettings"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "Microsoft.Web/certificates"
-      }
+      "field": "type",
+      "notEquals": "microsoft.alertsmanagement/smartdetectoralertrules"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "Microsoft.OperationsManagement/solutions"
-      }
+      "field": "type",
+      "notEquals": "Microsoft.Web/certificates"
      },
      {
-      "not": {
-       "field": "type",
-       "equals": "microsoft.insights/activityLogAlerts"
-      }
+      "field": "type",
+      "notEquals": "Microsoft.OperationsManagement/solutions"
+     },
+     {
+      "field": "type",
+      "notEquals": "microsoft.insights/activityLogAlerts"
+     },
+     {
+      "field": "type",
+      "notEquals": "Microsoft.Network/frontdoorwebapplicationfirewallpolicies"
      }
     ]
    },
